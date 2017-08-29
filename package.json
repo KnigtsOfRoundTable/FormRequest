@@ -1,0 +1,23 @@
+{
+  "name": "formrequest",
+  "version": "1.0.0",
+  "description": "Sending forms through HTML, Jquery AJAX, and Axios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kylejohnson2612@github.com/KnigtsOfRoundTable/FormRequest.git"
+  },
+  "author": "kyle johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KnigtsOfRoundTable/FormRequest/issues"
+  },
+  "homepage": "https://github.com/KnigtsOfRoundTable/FormRequest#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "jquery": "^3.2.1"
+  }
+}
