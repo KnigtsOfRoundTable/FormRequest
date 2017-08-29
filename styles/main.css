@@ -112,14 +112,14 @@ body {
   .nav .active {
     background-color: #edc7b7; }
 
-@media screen and (min-width: 566px) {
+@media screen and (min-width: 480px) {
   .headerWrapper {
     height: 300px; }
     .headerWrapper h1 {
       padding-top: 30px; }
 
   .nav {
-    width: 560px;
+    width: 335px;
     background-color: none;
     margin-top: 75px;
     margin-left: auto;
@@ -211,7 +211,7 @@ footer {
       margin-top: .2em;
       border: 1px solid #E3E3E3; }
 
-@media screen and (min-width: 566px) {
+@media screen and (min-width: 480px) {
   .ContentContact h1 {
     padding-top: 20px; }
   .ContentContact .contactForm input.userInput {

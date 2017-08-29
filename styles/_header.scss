@@ -41,7 +41,7 @@
 		background-color: $thirdColor;
 	}
 }
-@media screen and (min-width: 566px) { //480
+@media screen and (min-width: 480px) { //480
 	.headerWrapper {
 		height: 300px;
 		h1 {
@@ -49,7 +49,7 @@
 		}
 	}
 	.nav {
-		width: 560px;
+		width: 335px;
 		background-color: none;
 		margin-top: 75px;
 		margin-left: auto;
