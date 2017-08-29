@@ -58,6 +58,33 @@
 	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit">
 	<input type="hidden" value="erickThanks.html" name="redirect">
 	</form>
+
+
+
+	<h1>Contact Me using jquery Ajax</h1>
+	
+	<form action="" method="POST" enctype="multipart/form-data" class="contactForm">
+	
+		<fieldset>
+			<legend>Personal Information</legend>
+			<label><span>Name:</span><input name="name" type="text" placeholder="Your Name..." pattern="[a-zA-Z -.]{3,999}"  class="userInput" required></label>
+			<label><span>Phone:</span><input name="phone" type="tel" placeholder="5553331234" pattern="[0-9]{10}" class="userInput"></label>
+			<label><span>Email:</span><input name="email" type="email" placeholder="yourname@myemail.com"  class="userInput" required></label>
+			
+			<label><span>Best way to contact you?</span>
+			<select name="contactDropdown" class="contactOptions">
+				<option>Phone</option>
+				<option>Email</option>
+			</select></label>
+			
+			<label class="messageLabel"><span>Message:</span>
+			<textarea class="message" name="contactMessage"></textarea></label>
+		</fieldset>
+			
+	
+	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit">
+	<input type="hidden" value="erickThanks.html" name="redirect">
+	</form>
 </main>
 
 
