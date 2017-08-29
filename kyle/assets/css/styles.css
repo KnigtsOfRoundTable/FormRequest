@@ -1,0 +1,123 @@
+/*=============Demo Page===================*/
+
+body {
+  background: #FFF;/*---Noke Blue---*/
+  background-image: url('../img/background.png'); 
+}
+
+.demobox {
+  background:white;
+  margin-top: 30px;
+  box-shadow: 5px 5px 5px lightgrey;
+  border: solid 1px #0070cd;
+  padding: 20px;
+  border-top: solid 20px #0070cd;
+}
+.demobox h2 {
+color: #0071CE;/*---Noke Blue---*/
+font-size: 2em;
+}
+.demobox p {
+color: #000;
+font-size: 1em;
+padding-bottom: 20px;
+}
+
+#demo-form .form-group label{
+  display:none;
+  font-size:1em;
+  line-height:24px;
+}
+#demo-form.no-placeholder .form-group label{
+  display:block;
+}
+#demo-form .form-control {
+  background:#fff;
+  background:rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid lightgrey;
+  outline:none;
+  box-shadow:none;
+  height:35px;
+  color: #000;
+  font-size: 1em;
+  line-height:48px;
+}
+#demo-form .form-group{
+  position:relative;
+  margin-bottom:30px;
+}
+#demo-form textarea.form-control {
+  height:auto;
+  font-size:1em;
+  line-height:42px;
+}
+#demo-form .form-control:focus {
+  border:none;
+  outline:none;
+  box-shadow:none;
+}
+#demo-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
+  color: grey;
+  font-size: 1em;
+}
+#demo-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: grey;
+  font-size: 1em;
+  opacity:1;
+}
+#demo-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: grey;
+  font-size: 1em;
+  opacity:1;
+}
+#demo-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: grey;
+  font-size: 1em;
+}
+#demo-form .error-message {
+  background:red;
+  padding:10px 20px;
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  font-size:1em;
+}
+
+.preferdBox {
+margin: 20px 0 5px 0;
+}
+#smallerParagraph {
+font-size: 1.1em;
+  padding-bottom: 0;
+  margin-top: -20px;
+}
+#preferedInfo {
+margin: 5px 0 30px 10px;
+}
+#preferedInfo span {
+color: black;
+margin: 0 10px 0 10px;
+}
+.btn-lg-2 {
+display: block;
+float: left;
+height: 40px;
+width: 150px;
+margin: 0 0 0 10px;
+border: #FFF solid 1px;
+border-radius: 5px;
+font-size: 1em;
+background-color:#0070cd;
+color: white;
+}
+.btn-lg-2:hover {
+  background-color: lightgrey;
+  color:white;
+}
+
+.contactInfo {
+margin: 50px 0 0 100px;
+}
+
