@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* My Reset Styles */
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {
+  -webkit-text-size-adjust: none; }
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* End of Reset*/
+body {
+  font-family: "Mukta Mahee", sans-serif; }
+
+/* 760px (size we want) / 16 (16px = 1em) = 47.5em  For Tablet*/
+/* 1140px (size we want) / 16 (16px = 1em) = 71.25em For Desktop*/
+/*----- Clearfix -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.headerWrapper {
+  background-image: url(../images/yogurtBG.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+  font-family: "Baloo Bhaijaan", cursive; }
+  .headerWrapper h1 {
+    padding-top: 20px;
+    font-size: 3em;
+    text-align: center;
+    color: #ee4c7c;
+    -webkit-text-shadow: 0px 0px 1px #000;
+    -moz-text-shadow: 0px 0px 1px #000;
+    -ms-text-shadow: 0px 0px 1px #000;
+    text-shadow: 0px 0px 1px #000; }
+  .headerWrapper h2 {
+    font-size: 2em;
+    letter-spacing: .075em;
+    text-align: center;
+    color: #ee4c7c;
+    -webkit-text-shadow: 0px 0px 1px #000;
+    -moz-text-shadow: 0px 0px 1px #000;
+    -ms-text-shadow: 0px 0px 1px #000;
+    text-shadow: 0px 0px 1px #000; }
+
+.nav {
+  width: 100%;
+  background-color: none;
+  margin-top: 20px; }
+  .nav li {
+    padding: .6em;
+    text-align: center; }
+  .nav a {
+    text-decoration: none;
+    font-size: 1.45em;
+    color: #84ceeb;
+    -webkit-text-shadow: 1px 1px 1px #000;
+    -moz-text-shadow: 1px 1px 1px #000;
+    -ms-text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #000; }
+  .nav .active {
+    background-color: #edc7b7; }
+
+@media screen and (min-width: 566px) {
+  .headerWrapper {
+    height: 300px; }
+    .headerWrapper h1 {
+      padding-top: 30px; }
+
+  .nav {
+    width: 560px;
+    background-color: none;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto; }
+    .nav li {
+      float: left;
+      padding: .5em;
+      transition: background-color .4s linear; }
+      .nav li:hover {
+        background-color: #edc7b7; }
+    .nav a {
+      display: block;
+      font-size: 1.3em;
+      transition: color .4s linear; }
+      .nav a:hover {
+        color: #ee4c7c; } }
+footer {
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #FAF1EE; }
+  footer p {
+    font-size: .75em;
+    text-align: center;
+    color: #ee4c7c; }
+
+.default {
+  padding: 0 2%;
+  min-height: 350px; }
+  .default h1 {
+    font-size: 1.8em;
+    color: #ee4c7c;
+    padding: 20px 0; }
+  .default p {
+    font-size: 1em;
+    padding: 1.4em 0; }
+
+.ContentContact {
+  padding: 0 2%; }
+  .ContentContact h1 {
+    font-size: 1.8em;
+    color: #ee4c7c;
+    padding: 40px 0 20px 0; }
+  .ContentContact .contactForm {
+    padding: 0 4%; }
+    .ContentContact .contactForm fieldset {
+      padding: .5em 0; }
+    .ContentContact .contactForm legend {
+      color: #84ceeb;
+      padding: .25em 0 0 0;
+      font-size: 1.25em; }
+    .ContentContact .contactForm label {
+      margin-left: 1.5em;
+      display: block; }
+      .ContentContact .contactForm label.messageLabel {
+        margin-top: .50em; }
+    .ContentContact .contactForm span {
+      font-size: .8em; }
+      .ContentContact .contactForm span.formTitle {
+        font-size: 1em;
+        display: block;
+        margin: 1em 0 .5em 1.5em; }
+    .ContentContact .contactForm input.userInput {
+      display: block;
+      margin: .25em .25em 1em 0;
+      width: 90%;
+      padding: .75em; }
+    .ContentContact .contactForm input.submitbutton {
+      display: block;
+      border: #f0d5cc 1px solid;
+      padding: .75em;
+      background-color: #F0D5CC;
+      color: #ee4c7c;
+      font-size: .75em;
+      margin: .75em 0;
+      transition: border-radius .75s ease, background-color .75s ease; }
+      .ContentContact .contactForm input.submitbutton:hover {
+        background: none;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        border: #84ceeb 1px solid; }
+    .ContentContact .contactForm .contactOptions {
+      margin-left: 10px; }
+    .ContentContact .contactForm .message {
+      display: block;
+      width: 90%;
+      height: 100px;
+      margin-top: .2em;
+      border: 1px solid #E3E3E3; }
+
+@media screen and (min-width: 566px) {
+  .ContentContact h1 {
+    padding-top: 20px; }
+  .ContentContact .contactForm input.userInput {
+    width: 40%; }
+  .ContentContact .contactForm .message {
+    width: 40%; } }

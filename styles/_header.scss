@@ -1,0 +1,75 @@
+.headerWrapper {
+	background-image: url(../images/yogurtBG.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	font-family: $headFont;
+	
+	h1 {
+		padding-top: 20px;
+		font-size: 3em;
+		text-align: center;
+		color: $primaryColor;
+		@include text-shadow(0px, 0px, 1px, #000);
+	}
+	h2 {
+
+		font-size: 2em;
+		letter-spacing: .075em;
+		text-align: center;
+		color: $primaryColor;
+		@include text-shadow(0px, 0px, 1px, #000);
+	}
+}
+.nav {
+		width: 100%;
+		background-color: none;
+		margin-top: 20px;
+	ul {}
+	li {
+		padding: .6em;
+		text-align: center;
+	}
+	a {
+		text-decoration: none;
+		font-size: 1.45em;
+		color: $secondaryColor;
+		@include text-shadow(1px, 1px, 1px, #000);
+	}
+	.active  {
+		background-color: $thirdColor;
+	}
+}
+@media screen and (min-width: 566px) { //480
+	.headerWrapper {
+		height: 300px;
+		h1 {
+			padding-top: 30px;
+		}
+	}
+	.nav {
+		width: 560px;
+		background-color: none;
+		margin-top: 75px;
+		margin-left: auto;
+		margin-right: auto;
+		ul {}
+		li {
+			float: left;
+			padding: .5em;
+			transition: background-color .4s linear;
+			&:hover {
+				background-color: $thirdColor;
+			}
+		}
+		a {
+			display: block;
+			font-size: 1.3em;
+			transition: color .4s linear;
+			&:hover {
+				color: $primaryColor;
+			}
+	}
+	}//end of .nav
+}//end of media query
