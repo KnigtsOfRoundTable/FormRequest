@@ -52,6 +52,7 @@ padding-bottom: 20px;
   height:auto;
   font-size:1em;
   line-height:42px;
+  border: 2px solid lightgrey;
 }
 #demo-form .form-control:focus {
   border:none;
@@ -120,4 +121,3 @@ color: white;
 .contactInfo {
 margin: 50px 0 0 100px;
 }
-
