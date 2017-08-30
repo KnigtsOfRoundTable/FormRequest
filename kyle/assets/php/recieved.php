@@ -46,7 +46,7 @@ mail($to, $subject, $message, 'FROM:'.$email);
                 <p>Your contact information is:</p>
                 <p><?php echo $phone; ?></p>
                 <p><?php echo $email; ?></p>
-                <p><a href="index.html">Send another form!</a></p>
+                <p><a href="../../../kyle.html">Send another form!</a></p>
             </div>
           </div>
         </div>
