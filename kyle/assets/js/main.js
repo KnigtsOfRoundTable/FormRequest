@@ -47,7 +47,6 @@ $(document).ready(function() {
 				} else {
                     // log data to the console
                     console.log('Ajax Success', data); 
-                    alert("Ajax Successful, check out the console before clicking okay.");
                     // redirect a user to another page
                     window.location = 'kyle/thankyou.html';
                 } 
