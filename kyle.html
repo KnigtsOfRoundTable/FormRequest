@@ -8,138 +8,241 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 <link rel="stylesheet" href="kyle/assets/css/styles.css" >
 
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-<title>Sending Email</title>
+<!-- Latest compiled and minified JavaScript -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="kyle/assets/js/main.js"></script>
+
+<title>Form Request</title>
 </head>
 
 <body>
 <!-- ==============================================
 CONTACT
 =============================================== -->	
-	<div class="container fade-in">
-		<div class="row">
+<div class="container fade-in">
+	<div class="row">
 
-
-
-
-
-		  	<div class="col-sm-4 demobox">
-		  		<div class="row">
-		  			<div class="col-sm-12">
-		  			<h2>Request Info</h2>
+<!--===========HTTP REQUEST=================-->
+		<div class="col-sm-4 demobox">
+		  <div class="row">
+		  	<div class="col-sm-12">
+		  			<h2>HTTP Request</h2>
 		  			<p>To learn more about Kyle Design & Development, please complete the form below.</p>
-		  			</div>
-		  		</div>
-
-		  		<div class="row">
+		  	</div>
+		  </div>
+			<div class="row">
+				<form class="demo-form scrollimation" action="kyle/assets/php/http.php" method="POST" enctype="multipart/form-data">
 					<div class="col-sm-8">
-
-                        <form id="demo-form" class=" scrollimation" action="kyle/assets/php/recieved.php" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 						  <label class="control-label">Name</label>
 						  <div class="controls">
 							<input id="name" name="name" placeholder="Name" class="form-control input-lg requiredField" type="text" required="" oninvalid="this.setCustomValidity('Please enter your name.')" oninput="setCustomValidity('')">
 						  </div>
 						</div><!-- End name input -->
-                      
-                      	<div class="form-group">
+            <div class="form-group">
 						  <label class="control-label">Company</label>
 						  <div class="controls">
 							<input id="company" name="company" placeholder="Company" class="form-control input-lg" type="text">
 						  </div>
 						</div><!-- End company input -->
-
 						<div class="form-group">
 						  <label class="control-label">Phone</label>
 						  <div class=" controls">
 							<input id="phone" name="phone" placeholder="Phone" class="form-control input-lg" type="tel">
 						  </div>
 						</div><!-- End email input -->
-                      
-                      	<div class="form-group">
+            <div class="form-group">
 						  <label class="control-label">Email</label>
 						  <div class=" controls">
 							<input id="email" name="email" placeholder="Email" class="form-control input-lg requiredField" type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email.')" oninput="setCustomValidity('')">
 						  </div>
 						</div><!-- End email input -->
-
 						<div class="form-group">
 						  <label class="control-label" for="service">Type of Service</label>
 							<select id="service" name="service" placeholder="Type of Service" class="form-control">
-                                    <option>Type of Service</option>
-                                    <option>Web Design</option>
-                                    <option>App Design</option>
-                                    <option>Web Development</option>
-                                    <option>App Devlopment</option>
-                                    <option>Design & Development</option>
+								<option>Type of Service</option>
+								<option>Web Design</option>
+								<option>App Design</option>
+								<option>Web Development</option>
+								<option>App Devlopment</option>
+								<option>Design & Development</option>
 							</select>
 						</div><!-- End Users input -->
-
 						<div class="form-group">
 						  <label class="control-label">Budget</label>
 						  <div class=" controls">
 							<input id="budget" name="budget" placeholder="Budget for Product" class="form-control input-lg" type="number">
 						  </div>
 						</div><!-- End Locks input -->
+						<div class="form-group">
+							<div class=" controls">
+								<textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg" type="text"></textarea>
+							</div>
+						</div><!-- End Comments input -->
+						<div class="preferdBox">
+							<p id="smallerParagraph">Preferred method of contact</p>
+						</div>
+						<div id="preferedInfo">
+							<input type="radio" checked="checked" name="preferd" value="phone"><span>Phone</span>
+							<input type="radio" name="preferd" value="email"><span>Email</span>
+						</div>
+						<p><button type="submit" value="submit" id="submit" class="btn btn-theme btn-lg-2">Submit</button></p>
 					</div>
-                    <div class="col-sm-4"></div>
-						
+      	</form><!-- End contact-form -->
+    	</div><!--End row-->
+		</div><!--End Col-4-->
+
+<!--===========JQUERY AJAX REQUEST=================-->
+		<div class="col-sm-4 demobox">
+				<div class="row">
+					<div class="col-sm-12">
+							<h2>Jquery AJAX Request</h2>
+							<p>To learn more about Kyle Design & Development, please complete the form below.</p>
+					</div>
 				</div>
+				<div class="row">
+					<form id="ajaxform" class="demo-form scrollimation" action="kyle/assets/php/ajax.php" method="POST" enctype="multipart/form-data">
+						<div class="col-sm-8">
+								<div class="form-group">
+										<label class="control-label">Name</label>
+										<div class="controls">
+										<input id="name" name="name" placeholder="Name" class="form-control input-lg requiredField ajaxClass" type="text" required="" oninvalid="this.setCustomValidity('Please enter your name.')" oninput="setCustomValidity('')">
+										</div>
+									</div><!-- End name input -->
+							<div class="form-group">
+								<label class="control-label">Company</label>
+								<div class="controls">
+								<input id="company" name="company" placeholder="Company" class="form-control input-lg ajaxClass" type="text">
+								</div>
+							</div><!-- End company input -->
+							<div class="form-group">
+								<label class="control-label">Phone</label>
+								<div class=" controls">
+								<input id="phone" name="phone" placeholder="Phone" class="form-control input-lg ajaxClass" type="tel">
+								</div>
+							</div><!-- End email input -->
+							<div id="email-group" class="form-group">
+								<label class="control-label">Email</label>
+								<div class=" controls">
+								<input id="email" name="email" placeholder="Email" class="form-control input-lg requiredField ajaxClass" type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email.')" oninput="setCustomValidity('')">
+								</div>
+							</div><!-- End email input -->
+							<div class="form-group">
+								<label class="control-label" for="service">Type of Service</label>
+								<select id="service" name="service" placeholder="Type of Service" class="form-control ajaxClass">
+										<option value="none" selected="selected">Type of Service</option>
+										<option value="webDesign">Web Design</option>
+										<option value="appDesign">App Design</option>
+										<option value="webDev">Web Development</option>
+										<option value="webDev">App Devlopment</option>
+										<option value="both">Design & Development</option>
+									</select>
+							</div><!-- End Users input -->
+							<div class="form-group">
+								<label class="control-label">Budget</label>
+								<div class=" controls">
+								<input id="budget" name="budget" placeholder="Budget for Product" class="form-control input-lg ajaxClass" type="number">
+								</div>
+							</div><!-- End Locks input -->
+							<div class="form-group">
+								<div class=" controls">
+									<textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg ajaxClass" type="text"></textarea>
+								</div>
+							</div><!-- End Comments input -->
+							<div class="preferdBox">
+								<p id="smallerParagraph">Preferred method of contact</p>
+							</div>
+							<div id="preferedInfo">
+								<input type="radio" checked="checked" name="preferd" value="phone" class="ajaxClass"><span>Phone</span>
+								<input class="ajaxClass" type="radio" name="preferd" value="email"><span>Email</span>
+							</div>
+							<p><button type="submit" value="submit" id="submit" class="btn btn-theme btn-lg-2">Submit</button></p>
+						</div>
+					</form><!-- End contact-form -->
+				</div><!--End row-->
+			</div><!--End Col-4-->
 
-                <div class="row">
+<!--===========AXIOS REQUEST=================-->
+			<div class="col-sm-4 demobox">
+					<div class="row">
+						<div class="col-sm-12">
+								<h2>Axios Request</h2>
+								<p>To learn more about Kyle Design & Development, please complete the form below.</p>
+						</div>
+					</div>
+					<div class="row">
+						<form id="axiosform" class="demo-form scrollimation" action="kyle/assets/php/axios.php" method="POST" enctype="multipart/form-data">
+							<div class="col-sm-8">
+								<div class="form-group">
+									<label class="control-label">Name</label>
+									<div class="controls">
+									<input id="name" name="name" placeholder="Name" class="form-control input-lg requiredField" type="text" required="" oninvalid="this.setCustomValidity('Please enter your name.')" oninput="setCustomValidity('')">
+									</div>
+								</div><!-- End name input -->
+								<div class="form-group">
+									<label class="control-label">Company</label>
+									<div class="controls">
+									<input id="company" name="company" placeholder="Company" class="form-control input-lg" type="text">
+									</div>
+								</div><!-- End company input -->
+								<div class="form-group">
+									<label class="control-label">Phone</label>
+									<div class=" controls">
+									<input id="phone" name="phone" placeholder="Phone" class="form-control input-lg" type="tel">
+									</div>
+								</div><!-- End email input -->
+								<div class="form-group">
+									<label class="control-label">Email</label>
+									<div class=" controls">
+									<input id="email" name="email" placeholder="Email" class="form-control input-lg requiredField" type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email.')" oninput="setCustomValidity('')">
+									</div>
+								</div><!-- End email input -->
+								<div class="form-group">
+									<label class="control-label" for="service">Type of Service</label>
+									<select id="service" name="service" placeholder="Type of Service" class="form-control">
+										<option value="none" selected="selected">Type of Service</option>
+										<option value="webDesign">Web Design</option>
+										<option value="appDesign">App Design</option>
+										<option value="webDev">Web Development</option>
+										<option value="webDev">App Devlopment</option>
+										<option value="both">Design & Development</option>
+									</select>
+								</div><!-- End Users input -->
+								<div class="form-group">
+									<label class="control-label">Budget</label>
+									<div class=" controls">
+									<input id="budget" name="budget" placeholder="Budget for Product" class="form-control input-lg" type="number">
+									</div>
+								</div><!-- End Locks input -->
+								<div class="form-group">
+									<div class=" controls">
+										<textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg" type="text"></textarea>
+									</div>
+								</div><!-- End Comments input -->
+								<div class="preferdBox">
+									<p id="smallerParagraph">Preferred method of contact</p>
+								</div>
+								<div id="preferedInfo">
+									<input type="radio" checked="checked" name="preferd" value="phone"><span>Phone</span>
+									<input type="radio" name="preferd" value="email"><span>Email</span>
+								</div>
+								<p><button type="submit" value="submit" id="submit" class="btn btn-theme btn-lg-2">Submit</button></p>
+							</div>
+						</form><!-- End contact-form -->
+					</div><!--End row-->
+				</div><!--End Col-4-->
 
-                  <div class="col-sm-11">
-                      <div class="form-group">
-                        <div class=" controls">
-                          <textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg" type="text"></textarea>
-                        </div>
-                      </div><!-- End Comments input -->
-                  </div>
-
-                </div>
-
-				<div class="row preferdBox">
-
-				<div class="col-sm-12">
-				<p id="smallerParagraph">Preferred method of contact</p>
-				</div>
-
-				<div class="col-sm-6">
-				<div id="preferedInfo">
-				  <input type="radio" checked="checked" name="preferd" value="phone"><span>Phone</span>
-				  <input type="radio" name="preferd" value="email"><span>Email</span>
-				</div>
-				</div>
-                  
-              	</div>
-              
-              	<div class="row">
-
-				<div class="col-sm-12">
-				<p><button type="submit" value="submit" id="submit" class="btn btn-theme btn-lg-2">Submit</button></p>
-				</div>
-
-				</div>
-                  </form><!-- End contact-form -->
-              </div><!--End row-->
-		  </div><!--End Col-6-->
 
 
 
 
+	</div><!--end row -->
+</div><!--end container-->
 
-
-
-
-
-		</div><!-- End row -->	
-	</div><!-- End Container-fluid -->		
 </body>
 </html>
