@@ -15,6 +15,7 @@ $message = "Thank you $name, for requesting information about $service from Kyle
 
 //Send the Email
 mail($to, $subject, $message, 'FROM:'.$email);
+mail($email, $subject, $message, 'FROM:'.$to);
 
 ?>
 
@@ -41,7 +42,7 @@ mail($to, $subject, $message, 'FROM:'.$email);
         <div class="col-sm-10 demobox">
 		  <div class="row">
 		  	<div class="col-sm-12">
-                <h2>Thank You!</h2>
+                <h2>Success!</h2>
                 <p><?php  echo $message; ?></p>
                 <p>Your contact information is:</p>
                 <p><?php echo $phone; ?></p>

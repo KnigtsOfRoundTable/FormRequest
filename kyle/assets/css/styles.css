@@ -23,15 +23,15 @@ font-size: 1em;
 padding-bottom: 20px;
 }
 
-#demo-form .form-group label{
+.demo-form .form-group label{
   display:none;
   font-size:1em;
   line-height:24px;
 }
-#demo-form.no-placeholder .form-group label{
+.demo-form.no-placeholder .form-group label{
   display:block;
 }
-#demo-form .form-control {
+.demo-form .form-control {
   background:#fff;
   background:rgba(255,255,255,0.9);
   border: none;
@@ -44,40 +44,40 @@ padding-bottom: 20px;
   font-size: 1em;
   line-height:48px;
 }
-#demo-form .form-group{
+.demo-form .form-group{
   position:relative;
   margin-bottom:30px;
 }
-#demo-form textarea.form-control {
+.demo-form textarea.form-control {
   height:auto;
   font-size:1em;
   line-height:42px;
   border: 2px solid lightgrey;
 }
-#demo-form .form-control:focus {
+.demo-form .form-control:focus {
   border:none;
   outline:none;
   box-shadow:none;
 }
-#demo-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
+.demo-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
   color: grey;
   font-size: 1em;
 }
-#demo-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: grey;
-  font-size: 1em;
-  opacity:1;
-}
-#demo-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+.demo-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color: grey;
   font-size: 1em;
   opacity:1;
 }
-#demo-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+.demo-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: grey;
+  font-size: 1em;
+  opacity:1;
+}
+.demo-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
   color: grey;
   font-size: 1em;
 }
-#demo-form .error-message {
+.demo-form .error-message {
   background:red;
   padding:10px 20px;
   position:absolute;
