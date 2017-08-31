@@ -14,6 +14,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/axios/dist/axios.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="kyle/assets/js/main.js"></script>
 
@@ -181,30 +182,30 @@ CONTACT
 								<div class="form-group">
 									<label class="control-label">Name</label>
 									<div class="controls">
-									<input id="name" name="name" placeholder="Name" class="form-control input-lg requiredField" type="text" required="" oninvalid="this.setCustomValidity('Please enter your name.')" oninput="setCustomValidity('')">
+									<input id="name" name="name" placeholder="Name" class="form-control input-lg requiredField axiosClass" type="text" required="" oninvalid="this.setCustomValidity('Please enter your name.')" oninput="setCustomValidity('')">
 									</div>
 								</div><!-- End name input -->
 								<div class="form-group">
 									<label class="control-label">Company</label>
 									<div class="controls">
-									<input id="company" name="company" placeholder="Company" class="form-control input-lg" type="text">
+									<input id="company" name="company" placeholder="Company" class="form-control input-lg axiosClass" type="text">
 									</div>
 								</div><!-- End company input -->
 								<div class="form-group">
 									<label class="control-label">Phone</label>
 									<div class=" controls">
-									<input id="phone" name="phone" placeholder="Phone" class="form-control input-lg" type="tel">
+									<input id="phone" name="phone" placeholder="Phone" class="form-control input-lg axiosClass" type="tel">
 									</div>
 								</div><!-- End email input -->
 								<div class="form-group">
 									<label class="control-label">Email</label>
 									<div class=" controls">
-									<input id="email" name="email" placeholder="Email" class="form-control input-lg requiredField" type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email.')" oninput="setCustomValidity('')">
+									<input id="email" name="email" placeholder="Email" class="form-control input-lg axiosClass requiredField" type="email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" oninvalid="this.setCustomValidity('Please enter a valid email.')" oninput="setCustomValidity('')">
 									</div>
 								</div><!-- End email input -->
 								<div class="form-group">
 									<label class="control-label" for="service">Type of Service</label>
-									<select id="service" name="service" placeholder="Type of Service" class="form-control">
+									<select id="service" name="service" placeholder="Type of Service" class="form-control axiosClass">
 										<option value="none" selected="selected">Type of Service</option>
 										<option value="webDesign">Web Design</option>
 										<option value="appDesign">App Design</option>
@@ -216,12 +217,12 @@ CONTACT
 								<div class="form-group">
 									<label class="control-label">Budget</label>
 									<div class=" controls">
-									<input id="budget" name="budget" placeholder="Budget for Product" class="form-control input-lg" type="number">
+									<input id="budget" name="budget" placeholder="Budget for Product" class="form-control input-lg axiosClass" type="number">
 									</div>
 								</div><!-- End Locks input -->
 								<div class="form-group">
 									<div class=" controls">
-										<textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg" type="text"></textarea>
+										<textarea id="comments" name="comments" placeholder="Comments" class="form-control input-lg axiosClass" type="text"></textarea>
 									</div>
 								</div><!-- End Comments input -->
 								<div class="preferdBox">
