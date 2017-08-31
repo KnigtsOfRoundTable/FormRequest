@@ -1,5 +1,4 @@
 <?php 
-
   $name = $_REQUEST['name'];
   $from = $_REQUEST['from'];
   $body = $_REQUEST['body'];
@@ -11,9 +10,9 @@ $to = "NBA_EAP@hotmail.com";
   $header = "From: ". $name . " <" . $from . ">\r\n";
 
   if (mail($to, $subject, $body, $header)){
-    echo 'Your email has been sent!';
+    echo "<h1>Thank You, your email has been sent!";  
   } else {
-    echo 'Error: something went wrong.';
+    echo "<h1>Error: something went wrong.</h1>";
   }
 
 ?>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>RIA Forms</title>
-<link href="erickStyles/main.css" type="text/css" rel="stylesheet">
+<link href="erick/styles/main.css" type="text/css" rel="stylesheet">
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,700" rel="stylesheet"> 
@@ -35,7 +35,7 @@
 <main class="ContentContact">
 	<h1>Contact Me</h1>
 	
-	<form action="erickThanks.html" method="POST" enctype="multipart/form-data" class="contactForm">
+	<form action="erickThanks.php" method="POST" enctype="multipart/form-data" class="contactForm">
 	
 		<fieldset>
 			<legend>Personal Information</legend>
@@ -59,29 +59,29 @@
 
 	<h1>Contact Me using jquery Ajax</h1>
 	
-	<form action="erickScripts/ajax.php" method="POST" enctype="multipart/form-data" class="contactForm">
+	<form action="erick/scripts/ajax.php" method="POST" enctype="multipart/form-data" class="contactForm">
 	
 		<fieldset>
 			<legend>Personal Information</legend>
-			<label><span>Name:</span><input name="name" type="text" placeholder="Your Name..." pattern="[a-zA-Z -.]{3,999}"  class="userInput" ></label>
-			<label><span>Email:</span><input name="from" type="email" placeholder="yourname@myemail.com"  class="userInput" ></label>
+			<label><span>Name:</span><input name="name" id="name" type="text" placeholder="Your Name..." pattern="[a-zA-Z -.]{3,999}"  class="userInput" ></label>
+			<label><span>Email:</span><input name="from" id="from" type="email" placeholder="yourname@myemail.com"  class="userInput" ></label>
 			
 			<label class="messageLabel"><span>Message:</span>
-			<textarea class="message" name="body"></textarea></label>
+			<textarea class="message" name="body" id="body"></textarea></label>
 		</fieldset>
 			
 	
-	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit">
+	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit" id="sendMe">
 	<input type="hidden" value="erickThanks.html" name="redirect">
 	</form>
 
-	<div class="returnedMessage" id="returnedMessage"></div>
+	<div class="returnedMessage" id="returnedMessage">This is my returned message.</div>
 </main>
 
 <footer>
 	<p>&copy; 2017 &bull; Erick Perez</p>
 </footer>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="erickScripts/main.js"></script>
+<script type="text/javascript" src="erick/scripts/main.js"></script>
 </body>
 </html>

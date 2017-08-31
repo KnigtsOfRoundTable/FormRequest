@@ -1,19 +1,15 @@
 <?php
   $name = $_REQUEST['name'];
-  $from = $_REQUEST['from'];
-  $body = $_REQUEST['body'];
+  $email = $_REQUEST['email'];
+  $phone = $_REQUEST['phone'];
+  $message = $_REQUEST['contactMessage'];
+  $contactDropdown = $_REQUEST['contactDropdown'];
 
   //$to = "hiro@mrhiro.com"; //recipient 
 $to = "NBA_EAP@hotmail.com";
 
   $subject = "RIA Emails"; //subject 
   $header = "From: ". $name . " <" . $from . ">\r\n";
-
-  if (mail($to, $subject, $body, $header)){
-    echo 'Your email has been sent!';
-  } else {
-    echo 'Error: something went wrong.';
-  }
 ?>
 
 <!doctype html>
@@ -53,8 +49,15 @@ $to = "NBA_EAP@hotmail.com";
 </div>
 
 <main class="default">
-	<h1>Thank you for your message.<br>
-	We will contact you as soon as possible.</h1>
+
+<?php
+  if (mail($to, $subject, $message, $header)){
+    echo "	<h1>Thank You, your email has been sent!<br>
+	We will contact you as soon as possible.</h1>";
+  } else {
+    echo "<h1>Error: something went wrong.</h1>";
+  }
+?>
 
 	<p>You will be returned to the contact me page...</p>
 </main>
