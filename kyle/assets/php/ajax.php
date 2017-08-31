@@ -27,15 +27,18 @@ $data = array();
         //Write the Email
         $to = 'kylejohnson2612@gmail.com';
         $subject = 'Requst Info';
-        $message = "Thank you $name, for requesting information about $service from Kyle Design & Development. A representative will contact you shortly. This form was sent by HTTP request.";
+        $messageAdmin = "You have a request from $name, who is requesting information about $service from Kyle Design & Development. Here is thier email: $email, budget: $budget, and message: $comments";
+        $messageUser = "Thank you $name, for requesting information about $service from Kyle Design & Development. A representative will contact you shortly. This form was sent by a Jquery AJAX request.";
         
         //Send the Email
-        mail($to, $subject, $message, 'FROM:'.$email);
-        mail($email, $subject, $message, 'FROM:'.$to);
+        mail($to, $subject, $messageAdmin, 'FROM:'.$email);
+        mail($email, $subject, $messageUser, 'FROM:'.$to);
         
 		// show a message of success
 		$data['success'] = true;
-		$data['message'] = 'Success!';
+		$data['messageUser'] = 'Success!';
 	}
 	// return all data to AJAX call
-	echo json_encode($data);
+    echo json_encode($data);
+    
+    ?>
