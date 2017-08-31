@@ -1,0 +1,23 @@
+{
+  "name": "formrequest",
+  "version": "1.0.0",
+  "description": "Connecting through HTML, Jquery AJax, and Axios",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KnigtsOfRoundTable/FormRequest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KnigtsOfRoundTable/FormRequest/issues"
+  },
+  "homepage": "https://github.com/KnigtsOfRoundTable/FormRequest#readme"
+}
