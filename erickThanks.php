@@ -20,7 +20,7 @@ $to = "NBA_EAP@hotmail.com";
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <title>RIA Forms</title>
-<link href="erickStyles/main.css" type="text/css" rel="stylesheet">
+<link href="erick/styles/main.css" type="text/css" rel="stylesheet">
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,700" rel="stylesheet"> 
