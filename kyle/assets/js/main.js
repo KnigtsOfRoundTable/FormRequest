@@ -1,3 +1,4 @@
+//==================Jquery AJAX===========================
 $(document).ready(function() {
     
         // process the form
@@ -56,3 +57,34 @@ $(document).ready(function() {
         });
     
     });
+
+//=====================Axios============================
+document.getElementById('axiosForm').addEventListener('submit', performPostRequest);
+function performPostRequest(e) {
+  var resultElement = document.getElementById('postResult');
+  //var todoTitle = document.getElementById('todoTitle').value;
+  resultElement.innerHTML = '';
+  var axiosData = {
+                'name' 	    : $('input[name=name].ajaxClass').val(),
+                'company' 	: $('input[name=company].ajaxClass').val(),
+                'phone' 	: $('input[name=phone].ajaxClass').val(),
+                'email' 	: $('input[name=email].ajaxClass').val(),
+                'service' 	: $('select[name=service].ajaxClass').val(),
+                'budget' 	: $('input[name=budget].ajaxClass').val(),
+                'comments' 	: $('textarea[name=comments].ajaxClass').val()
+            };
+
+  axios({
+    method: 'post',
+    url: 'kyle/assets/php/axios.php',
+    data: axiosData,
+    })
+  .then(function (response) {
+    resultElement.innerHTML = generateSuccessHTMLOutput(response);
+  })
+  .catch(function (error) {
+    resultElement.innerHTML = generateErrorHTMLOutput(error);
+  });
+  
+  e.preventDefault();
+}
