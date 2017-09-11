@@ -57,6 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-#other files
-.json
-
+node_modules/
