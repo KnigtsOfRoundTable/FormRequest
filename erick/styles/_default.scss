@@ -1,0 +1,13 @@
+.default {
+	padding: 0 2%;
+	min-height: 350px;
+	h1 {
+		font-size: 1.8em;
+		color: $primaryColor;
+		padding: 20px 0;
+	}
+	p {
+		font-size: 1em;
+		padding: 1.4em 0;
+	}
+}
