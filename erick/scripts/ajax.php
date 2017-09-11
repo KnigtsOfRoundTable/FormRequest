@@ -3,8 +3,7 @@
   $email = $_POST['from'];
   $message = $_POST['body'];
 
-  //$to = "hiro@mrhiro.com"; //recipient 
-$to = "NBA_EAP@hotmail.com";
+  $to = "hiro@mrhiro.com"; //recipient 
 
   $subject = "RIA Emails"; //subject 
   $header = "From: " . $name . " <" . $email . ">\r\n";
@@ -36,4 +35,6 @@ $to = "NBA_EAP@hotmail.com";
 <![endif]-->
 <meta http-equiv="refresh" content="5; URL=../../erick.html">
 </head>
+
+
 </html>

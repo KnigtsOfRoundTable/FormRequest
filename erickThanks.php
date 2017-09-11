@@ -5,8 +5,7 @@
   $message = $_REQUEST['contactMessage'];
   $contactDropdown = $_REQUEST['contactDropdown'];
 
-  //$to = "hiro@mrhiro.com"; //recipient 
-$to = "NBA_EAP@hotmail.com";
+  $to = "hiro@mrhiro.com"; //recipient 
 
   $subject = "RIA Emails"; //subject 
   $header = "From: ". $name . " <" . $from . ">\r\n";

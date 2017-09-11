@@ -1,26 +1,29 @@
 $(document).ready(function(){
-    
 
-var name = "";
-var from = "";
-var body = "";
 
 $("#sendMe").submit(function(){
-event.preventDefault();
+e.preventDefault();
 
-	name = $("#name").val();
-	from = $("#from").val();
-	body = $("#body").val();
+
+	var data = {
+        name: $("#name").val(),
+    	from: $("#from").val(),
+    	body: $("#body").val()
+    };
 
 	$.ajax({
     	url: 'ajax.php', 
     	type: 'POST',
+        data: data,
     	success: function(data){
         	$("div#returnedMessage").html(data);
         	console.log(data);
     	}//end of success callback function
-    });//end of ajax method
-
+    })//end of ajax method
+    .done(function(data){
+        $("div#returnedMessage").html(data);
+            console.log(data);
+        });
 
 });//end of sendMe click event
 
