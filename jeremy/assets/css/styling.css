@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: Verdana, Geneva, sans-serif;
+}
+h1{
+	font-family: 'Raleway';
+	font-weight: normal;
+	color: #2B7759;
+}
+
+fieldset{
+	background-color: #eee;
+	border-radius: .8em;
+	margin: 1.5em 0;
+	border: #917a56 solid 1px;
+	max-width: 400px;
+}
+
+legend{
+	color: #007245;
+	margin-left: 6%;
+	padding: .5em;
+	border: #917a56 solid 1px;
+	background-color: #ddd;
+	border-radius: .4em;
+	width: 50%;
+	font-family: 'Raleway';
+	font-size: 1.2em;
+}
+
+
+/*User instructions for each input. Name, Email, Address, and etc. */
+label{
+	display:block;/*forces a hard return and allows for the magin to be assigned*/
+	margin: .5em;
+}
+
+
+label p{
+	margin: 0;
+	font-size: .8em;
+	color: #B2AFAF;
+	padding-top: .9em;
+	padding-bottom: .2em;
+}
+
+
+label span{
+	font-size: .8em;
+	color:#B2AFAF;
+}
+
+
+input.submitBtn {
+	display: block;
+	padding: .5em;
+	color: #E4E0F2;
+	width: 20%;
+	border-radius: 8px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+	border: 1px solid #333;
+	background: rgb(175,59,73);
+	background: -moz-linear-gradient(top, rgba(4,65,140,1.00) 1%, rgba(4,65,140,1.00) 100%);
+	background: -webkit-linear-gradient(top, rgba(4,65,140,1.00) 1%,rgba(4,65,140,1.00) 100%);
+	background: -o-linear-gradient(top, rgba(4,65,140,1.00) 1%,rgba(4,65,140,1.00) 100%);
+	background: -ms-linear-gradient(top, rgba(4,65,140,1.00) 1%,rgba(4,65,140,1.00) 100%);
+	background: linear-gradient(top, rgba(4,65,140,1.00) 1%,rgba(4,65,140,1.00) 100%);
+}
