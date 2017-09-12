@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging whena phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>RIA Forms</title>
+<link href="erick/styles/main.css" type="text/css" rel="stylesheet">
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Mukta+Mahee:300,700" rel="stylesheet"> 
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="headerWrapper clearfix">
+	<h1>RIA Forms</h1>
+	<h2>DGM 3790</h2>
+	
+	<div class="nav clearfix">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="ben.html">Ben</a></li>
+			<li class="active"><a href="erick.html">Erick</a></li>
+			<li><a href="jeremy.html">Jeremy</a></li>
+			<li><a href="kyle.html">Kyle</a></li>
+		</ul>
+	</div>
+</div>
+
+<main class="ContentContact">
+	<h1>Contact Me</h1>
+	
+	<form action="erickThanks.php" method="POST" enctype="multipart/form-data" class="contactForm">
+	
+		<fieldset>
+			<legend>Personal Information</legend>
+			<label><span>Name:</span><input name="name" type="text" placeholder="Your Name..." pattern="[a-zA-Z -.]{3,999}"  class="userInput" required></label>
+			<label><span>Phone:</span><input name="phone" type="tel" placeholder="5553331234" pattern="[0-9]{10}" class="userInput"></label>
+			<label><span>Email:</span><input name="email" type="email" placeholder="yourname@myemail.com"  class="userInput" required></label>
+			
+			<label><span>Best way to contact you?</span>
+			<select name="contactDropdown" class="contactOptions">
+				<option>Phone</option>
+				<option>Email</option>
+			</select></label>
+			
+			<label class="messageLabel"><span>Message:</span>
+			<textarea class="message" name="contactMessage"></textarea></label>
+		</fieldset>	
+	
+	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit">
+	<input type="hidden" value="erickThanks.html" name="redirect">
+	</form>
+
+	<h1>Contact Me using jquery Ajax</h1>
+	
+	<form action="erick/scripts/ajax.php" method="POST" enctype="multipart/form-data" class="contactForm">
+	
+		<fieldset>
+			<legend>Personal Information</legend>
+			<label><span>Name:</span><input name="name" id="name" type="text" placeholder="Your Name..." pattern="[a-zA-Z -.]{3,999}"  class="userInput" ></label>
+			<label><span>Email:</span><input name="from" id="from" type="email" placeholder="yourname@myemail.com"  class="userInput" ></label>
+			
+			<label class="messageLabel"><span>Message:</span>
+			<textarea class="message" name="body" id="body"></textarea></label>
+		</fieldset>
+			
+	
+	<input class="submitbutton" name="submitbutton" value="Send Message" type="submit" id="sendMe">
+	<input type="hidden" value="erickThanks.html" name="redirect">
+	</form>
+
+	<div class="returnedMessage" id="returnedMessage"></div>
+</main>
+
+<footer>
+	<p>&copy; 2017 &bull; Erick Perez</p>
+</footer>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="erick/scripts/main.js"></script>
+</body>
+</html>
