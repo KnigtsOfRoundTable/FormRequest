@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Request</title>
+
+<!Google Font>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+
+<link href="jeremy/assets/css/styling.css" rel="stylesheet" type="text/css">
+
+ <!-- Latest compiled and minified JavaScript -->
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+ <script src="node_modules/axios/dist/axios.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+
+</head>
+
+<body>
+
+     <!--===========HTTP REQUEST=================-->
+    <h1>Information request for Flight</h1>
+    <h2>Http Request</h2>
+	<form id="httprequest" action="processEmail.php" method="POST" enctype="multipart/form-data" name="travelInfo">
+	<fieldset>
+		<legend>Personal Info</legend>
+		<label><p>Name:</p><input name="fullname" value="" type="text" placeholder="Full Name" required></label>
+		<label><p>Email:</p><input name="email" value="" type="email" placeholder="zenuser@gmail.com"  required></label>
+		<label><p>Address:</p><input name="address" value="" type="text" placeholder="4231 N. Valor Road"  required></label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Airline</legend>
+		
+		<label>Please Select:
+			<select name="airline">
+				<option value="South West">South West</option>
+				<option value="Delta">Delta</option>
+				<option value="Lufthansa">Lufthansa</option>
+				<option value="Aero Mexico">Aero Mexico</option>
+			</select>
+		</label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Destination</legend>
+		<input type="text" name="destination" list="destination" />
+		<datalist id="destination">
+			<option value="England"></option>
+			<option value="Japan"></option>
+			<option value="Germany"></option>
+			<option value="Mexico"></option>
+		</datalist>
+		
+	</fieldset>
+	<input type="submit" value="Send Info" class="submitBtn">
+	
+	<input type="hidden" value="Flight Registration" name="subject">
+	<input name="redirect" type="hidden" value="thanks.html">
+	
+    </form>
+    
+
+     <!--===========JQUERY AJAX REQUEST=================-->
+    <h1>Information request for Flight</h1>
+    <h2>Jquery Ajax Request</h2>
+	<form id="ajaxrequest" action="processEmail.php" method="POST" enctype="multipart/form-data" name="travelInfo">
+	<fieldset>
+		<legend>Personal Info</legend>
+		<label><p>Name:</p><input name="fullname" value="" type="text" placeholder="Full Name" class="form-control ajaxClass" required></label>
+		<label><p>Email:</p><input name="email" value="" type="email" placeholder="zenuser@gmail.com" class="form-control ajaxClass" required></label>
+		<label><p>Address:</p><input name="address" value="" type="text" placeholder="4231 N. Valor Road" class="form-control ajaxClass"></label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Airline</legend>
+		
+		<label>Please Select:
+			<select name="airline" class="form-control ajaxClass">
+				<option value="South West">South West</option>
+				<option value="Delta">Delta</option>
+				<option value="Lufthansa">Lufthansa</option>
+				<option value="Aero Mexico">Aero Mexico</option>
+			</select>
+		</label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Destination</legend>
+		<input type="text" name="destination" list="destination" class="form-control ajaxClass"/>
+		<datalist id="destination">
+			<option value="England"></option>
+			<option value="Japan"></option>
+			<option value="Germany"></option>
+			<option value="Mexico"></option>
+		</datalist>
+		
+	</fieldset>
+	<input type="submit" value="Send Info" class="submitBtn">
+	
+	<input type="hidden" value="Flight Registration" name="subject">
+	<input name="redirect" type="hidden" value="thanksAjax.html">
+	
+    </form>
+    
+
+    <!--===========AXIOS REQUEST=================-->
+    <h1>Information request for Flight</h1>
+    <h2>Axios Request</h2>
+	<form id="axiosrequest" action="processEmail.php" method="POST" enctype="multipart/form-data" name="travelInfo">
+	<fieldset>
+		<legend>Personal Info</legend>
+		<label><p>Name:</p><input name="fullname" value="" type="text" placeholder="Full Name" class="form-control axiosClass" required></label>
+		<label><p>Email:</p><input name="email" value="" type="email" placeholder="zenuser@gmail.com" class="form-control axiosClass" required></label>
+		<label><p>Address:</p><input name="address" value="" type="text" placeholder="4231 N. Valor Road" class="form-control axiosClass"></label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Airline</legend>
+		
+		<label>Please Select:
+			<select name="airline" class="form-control axiosClass">
+				<option value="South West">South West</option>
+				<option value="Delta">Delta</option>
+				<option value="Lufthansa">Lufthansa</option>
+				<option value="Aero Mexico">Aero Mexico</option>
+			</select>
+		</label>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Destination</legend>
+		<input type="text" name="destination" list="destination" />
+		<datalist id="destination" class="form-control axiosClass">
+			<option value="England"></option>
+			<option value="Japan"></option>
+			<option value="Germany"></option>
+			<option value="Mexico"></option>
+		</datalist>
+		
+	</fieldset>
+	<input type="submit" value="Send Info" class="submitBtn">
+	
+	<input type="hidden" value="Flight Registration" name="subject">
+	<input name="redirect" type="hidden" value="thanksAxios.html">
+	
+	</form>
+</body>
+</html>
